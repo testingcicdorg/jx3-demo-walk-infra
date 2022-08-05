@@ -4,6 +4,7 @@
 variable "region" {
   description = "AWS region code for creating resources."
   type        = string
+  default     = "eu-central-1"
 }
 
 variable "profile" {
@@ -14,6 +15,7 @@ variable "profile" {
 variable "cluster_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
+  default     = "1.22"
 }
 
 variable "vault_user" {
@@ -25,7 +27,7 @@ variable "vault_user" {
 variable "cluster_name" {
   description = "Name of the Kubernetes cluster to create"
   type        = string
-  default     = ""
+  default     = "testingcicdonk8s-jenkins-x"
 }
 
 variable "force_destroy" {
@@ -64,5 +66,29 @@ variable "nginx_chart_version" {
 variable "install_kuberhealthy" {
   description = "Flag to specify if kuberhealthy operator should be installed"
   type        = bool
-  default     = true
+  default     = false
+}
+
+variable "desired_node_count" {
+  description = "The number of worker nodes to use for the cluster"
+  type        = number
+  default     = 3
+}
+
+variable "min_node_count" {
+  description = "The minimum number of worker nodes to use for the cluster"
+  type        = number
+  default     = 3
+}
+
+variable "max_node_count" {
+  description = "The maximum number of worker nodes to use for the cluster"
+  type        = number
+  default     = 3
+}
+
+variable "node_machine_type" {
+  description = "The instance type to use for the cluster's worker nodes"
+  type        = string
+  default     = "t2.medium"
 }
