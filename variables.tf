@@ -68,27 +68,3 @@ variable "install_kuberhealthy" {
   type        = bool
   default     = false
 }
-
-variable "desired_node_count" {
-  description = "The number of worker nodes to use for the cluster"
-  type        = number
-  default     = 3
-}
-
-variable "min_node_count" {
-  description = "The minimum number of worker nodes to use for the cluster"
-  type        = number
-  default     = 3
-}
-
-variable "max_node_count" {
-  description = "The maximum number of worker nodes to use for the cluster"
-  type        = number
-  default     = 3
-}
-
-variable "node_machine_type" {
-  description = "The instance type to use for the cluster's worker nodes"
-  type        = string
-  default     = "t2.medium"
-}

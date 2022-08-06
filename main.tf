@@ -16,8 +16,6 @@ module "eks-jx" {
   force_destroy        = var.force_destroy
   nginx_chart_version  = var.nginx_chart_version
   install_kuberhealthy = var.install_kuberhealthy
-  desired_node_count   = var.desired_node_count
-  min_node_count       = var.min_node_count
-  max_node_count       = var.max_node_count
-  node_machine_type    = var.node_machine_type
+  create_eks           = false
+  create_vpc           = false
 }
