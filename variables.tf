@@ -15,7 +15,7 @@ variable "profile" {
 variable "cluster_version" {
   description = "Kubernetes version to use for the EKS cluster."
   type        = string
-  default     = "1.22"
+  default     = "1.21"
 }
 
 variable "vault_user" {
@@ -61,10 +61,4 @@ variable "nginx_chart_version" {
   type        = string
   description = "nginx chart version"
   default     = "3.12.0"
-}
-
-variable "install_kuberhealthy" {
-  description = "Flag to specify if kuberhealthy operator should be installed"
-  type        = bool
-  default     = true
 }

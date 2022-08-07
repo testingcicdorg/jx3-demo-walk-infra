@@ -15,7 +15,7 @@ module "eks-jx" {
   jx_bot_token         = var.jx_bot_token
   force_destroy        = var.force_destroy
   nginx_chart_version  = var.nginx_chart_version
-  install_kuberhealthy = var.install_kuberhealthy
+  install_kuberhealthy = false
   create_eks           = false
   create_vpc           = false
 }
